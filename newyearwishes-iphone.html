@@ -1,0 +1,1493 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <title>🎉 Happy New Year 2026! 🎊</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700;900&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Tangerine:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Cormorant Garamond', serif;
+            background: linear-gradient(135deg, #1a1410 0%, #2d1f1a 30%, #0a0604 60%, #1a1410 100%);
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            overflow: hidden;
+            position: relative;
+            -webkit-tap-highlight-color: transparent;
+        }
+
+        /* Animated Background Stars */
+        .stars {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
+        }
+
+        .star {
+            position: absolute;
+            background: linear-gradient(135deg, #FFD700, #FFA500);
+            border-radius: 50%;
+            animation: twinkle 3s infinite;
+            box-shadow: 0 0 10px rgba(255, 215, 0, 0.8);
+        }
+
+        @keyframes twinkle {
+            0%, 100% { opacity: 0.3; transform: scale(1); }
+            50% { opacity: 1; transform: scale(1.2); }
+        }
+
+        /* Card Container */
+        .card-container {
+            perspective: 1000px;
+            z-index: 10;
+        }
+
+        .card {
+            background: transparent;
+            border-radius: 30px;
+            padding: 20px 30px;
+            max-width: 600px;
+            width: 90vw;
+            text-align: center;
+            position: relative;
+            overflow: visible;
+        }
+
+        .card > * {
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        /* Greeting Text */
+        .greeting {
+            font-size: 3.2rem;
+            font-weight: 400;
+            font-family: 'Cinzel', serif;
+            background: linear-gradient(180deg, #FFFFFF 0%, #F5F5DC 50%, #E8DCC0 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            margin-bottom: 15px;
+            animation: elegantFadeIn 12s cubic-bezier(0.25, 0.46, 0.45, 0.94) 5s backwards;
+            filter: drop-shadow(0 5px 30px rgba(255, 215, 0, 0.4)) drop-shadow(0 10px 50px rgba(255, 165, 0, 0.2));
+            letter-spacing: 14px;
+            text-transform: uppercase;
+            position: relative;
+            line-height: 1.3;
+            display: inline-block;
+            padding: 0 20px;
+        }
+
+        @keyframes elegantFadeIn {
+            0% {
+                opacity: 0;
+                transform: translateY(-40px) scale(0.95);
+                filter: blur(8px) drop-shadow(0 0 0 rgba(255, 215, 0, 0));
+                letter-spacing: 20px;
+            }
+            40% {
+                opacity: 0.5;
+                transform: translateY(-10px) scale(0.98);
+                filter: blur(3px) drop-shadow(0 5px 20px rgba(255, 215, 0, 0.3));
+            }
+            70% {
+                opacity: 1;
+                transform: translateY(5px) scale(1.02);
+                filter: blur(0) drop-shadow(0 5px 30px rgba(255, 215, 0, 0.5));
+            }
+            100% {
+                opacity: 1;
+                transform: translateY(0) scale(1);
+                filter: blur(0) drop-shadow(0 5px 30px rgba(255, 215, 0, 0.4)) drop-shadow(0 10px 50px rgba(255, 165, 0, 0.2));
+                letter-spacing: 14px;
+            }
+        }
+
+        @keyframes sparkleGlow {
+            0%, 100% { 
+                filter: drop-shadow(0 0 20px rgba(255, 215, 0, 1)) 
+                        drop-shadow(0 0 30px rgba(255, 165, 0, 0.8));
+            }
+            50% { 
+                filter: drop-shadow(0 0 40px rgba(255, 255, 255, 1)) 
+                        drop-shadow(0 0 60px rgba(255, 215, 0, 1));
+            }
+        }
+
+        @keyframes pulse {
+            0%, 100% { transform: scale(1); }
+            50% { transform: scale(1.05); }
+        }
+
+        .year {
+            font-size: 3.5rem;
+            font-weight: 700;
+            font-family: 'Cinzel', serif;
+            color: #FFD700;
+            text-shadow: 0 0 30px rgba(255, 215, 0, 0.6), 
+                         0 0 50px rgba(255, 215, 0, 0.4),
+                         0 5px 20px rgba(0, 0, 0, 0.5);
+            margin: 15px 0;
+            animation: elasticBounce 7s cubic-bezier(0.68, -0.55, 0.265, 1.55) 12s backwards;
+            letter-spacing: 12px;
+            filter: drop-shadow(0 0 25px rgba(255, 215, 0, 0.5));
+        }
+
+        @keyframes elasticBounce {
+            0% {
+                opacity: 0;
+                transform: scale(0) rotate(-180deg);
+                filter: blur(20px);
+            }
+            50% {
+                opacity: 1;
+                transform: scale(1.2) rotate(5deg);
+                filter: blur(0);
+            }
+            65% {
+                transform: scale(0.9) rotate(-3deg);
+            }
+            80% {
+                transform: scale(1.05) rotate(2deg);
+            }
+            100% {
+                opacity: 1;
+                transform: scale(1) rotate(0deg);
+                filter: blur(0);
+            }
+        }
+
+        @keyframes glow {
+            0%, 100% { text-shadow: 0 0 30px #FFF, 0 0 50px #FFD700, 0 10px 30px rgba(255, 215, 0, 0.5); }
+            50% { text-shadow: 0 0 50px #FFD700, 0 0 80px #FFF, 0 10px 40px rgba(255, 165, 0, 0.8); }
+        }
+
+        /* Personalization Input */
+        .personalize-section {
+            margin: 20px 0;
+        }
+
+        .name-input {
+            padding: 15px 25px;
+            font-size: 1.1rem;
+            border: 3px solid #667eea;
+            border-radius: 50px;
+            outline: none;
+            text-align: center;
+            width: 100%;
+            max-width: 350px;
+            transition: all 0.3s;
+        }
+
+        .name-input:focus {
+            border-color: #764ba2;
+            box-shadow: 0 0 20px rgba(102, 126, 234, 0.4);
+        }
+
+        .personalized-message {
+            font-size: 2.5rem;
+            font-family: 'Tangerine', cursive;
+            color: #FFD700;
+            margin: 8px 0;
+            min-height: 50px;
+            font-weight: 700;
+            animation: splitReveal 7s cubic-bezier(0.68, -0.55, 0.265, 1.55) 12s backwards;
+            text-shadow: 0 0 30px rgba(255, 215, 0, 1),
+                         0 0 50px rgba(255, 215, 0, 0.8),
+                         0 5px 20px rgba(255, 165, 0, 0.6);
+            letter-spacing: 2px;
+            text-transform: none;
+            transform-style: preserve-3d;
+            position: relative;
+        }
+
+        @keyframes splitReveal {
+            0% {
+                opacity: 0;
+                transform: perspective(1000px) rotateY(-90deg) scale(0.5);
+                filter: blur(15px);
+            }
+            60% {
+                opacity: 1;
+                transform: perspective(1000px) rotateY(10deg) scale(1.1);
+                filter: blur(0);
+            }
+            80% {
+                transform: perspective(1000px) rotateY(-5deg) scale(0.95);
+            }
+            100% {
+                opacity: 1;
+                transform: perspective(1000px) rotateY(0deg) scale(1);
+                filter: blur(0);
+            }
+        }
+
+        @keyframes gradientShift {
+            0%, 100% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+        }
+
+        @keyframes textGlow {
+            0%, 100% { 
+                filter: drop-shadow(0 0 15px rgba(255, 215, 0, 1)) 
+                        drop-shadow(0 0 25px rgba(255, 165, 0, 0.8));
+                transform: scale(1);
+            }
+            50% { 
+                filter: drop-shadow(0 0 30px rgba(255, 255, 255, 1)) 
+                        drop-shadow(0 0 50px rgba(255, 215, 0, 1));
+                transform: scale(1.05);
+            }
+        }
+
+        /* Wishes */
+        .wishes {
+            font-size: 1.5rem;
+            font-family: 'Cormorant Garamond', serif;
+            color: #D4AF37;
+            line-height: 1.8;
+            margin: 8px 0;
+            font-weight: 300;
+            font-style: italic;
+            letter-spacing: 1.5px;
+            text-shadow: 0 2px 20px rgba(212, 175, 55, 0.8),
+                         0 0 30px rgba(255, 215, 0, 0.4);
+            opacity: 0;
+            animation: fadeExpand 7s cubic-bezier(0.175, 0.885, 0.32, 1.275) 19s forwards;
+        }
+
+        @keyframes fadeExpand {
+            0% {
+                opacity: 0;
+                transform: scale(0.7) translateY(50px) rotateX(-30deg);
+                filter: blur(10px);
+            }
+            70% {
+                opacity: 1;
+                transform: scale(1.05) translateY(-5px) rotateX(5deg);
+                filter: blur(0);
+            }
+            85% {
+                transform: scale(0.98) translateY(2px) rotateX(-2deg);
+            }
+            100% {
+                opacity: 1;
+                transform: scale(1) translateY(0) rotateX(0deg);
+                filter: blur(0);
+            }
+        }
+
+        /* Buttons */
+        .button-group {
+            display: flex;
+            gap: 15px;
+            justify-content: center;
+            flex-wrap: wrap;
+            margin-top: 20px;
+            opacity: 0;
+            animation: fadeIn 5s ease-out 26s forwards;
+        }
+
+        .btn {
+            padding: 14px 35px;
+            font-size: 0.95rem;
+            font-weight: 700;
+            font-family: 'Cinzel', serif;
+            border: 2px solid rgba(255, 215, 0, 0.5);
+            border-radius: 50px;
+            cursor: pointer;
+            transition: all 0.4s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.5), 0 0 30px rgba(255, 215, 0, 0.3);
+            /* iOS Safari fix: both prefixed and standard */
+            -webkit-backdrop-filter: blur(10px);
+            backdrop-filter: blur(10px);
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .btn::before {
+            content: '';
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            width: 0;
+            height: 0;
+            border-radius: 50%;
+            background: rgba(255, 255, 255, 0.3);
+            transform: translate(-50%, -50%);
+            transition: width 0.6s, height 0.6s;
+        }
+
+        .btn:hover::before {
+            width: 300px;
+            height: 300px;
+        }
+
+        .btn-fireworks {
+            background: linear-gradient(135deg, #FFD700, #FFA500);
+            color: #1a1410;
+            font-weight: 700;
+        }
+
+        .btn-confetti {
+            background: linear-gradient(135deg, #E8E8E8, #C0C0C0);
+            color: #1a1410;
+            font-weight: 700;
+        }
+
+        .btn-music {
+            background: linear-gradient(135deg, #D4AF37, #FFD700);
+            color: #1a1410;
+            font-weight: 700;
+        }
+
+        .btn:hover {
+            transform: translateY(-5px) scale(1.05);
+            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.4), inset 0 1px 0 rgba(255, 255, 255, 0.5);
+            border-color: rgba(255, 255, 255, 0.6);
+        }
+
+        .btn:active {
+            transform: translateY(-2px) scale(1.02);
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+        }
+
+        /* Welcome Banner */
+        .welcome-banner {
+            font-size: 1.2rem;
+            font-family: 'Cormorant Garamond', serif;
+            font-weight: 600;
+            color: #FFD700;
+            margin: 12px 0 8px 0;
+            text-shadow: 0 2px 25px rgba(255, 215, 0, 0.9),
+                         0 0 40px rgba(255, 215, 0, 0.6);
+            opacity: 0;
+            animation: popIn 7s cubic-bezier(0.68, -0.55, 0.265, 1.55) 12s forwards;
+            letter-spacing: 2px;
+            line-height: 1.6;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+
+        /* Confetti Canvas */
+        #confetti-canvas {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
+            z-index: 100;
+        }
+
+        /* Fireworks Canvas */
+        #fireworks-canvas {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
+            z-index: 99;
+        }
+
+        /* Cursor Trail */
+        .sparkle {
+            position: fixed;
+            width: 10px;
+            height: 10px;
+            background: white;
+            border-radius: 50%;
+            pointer-events: none;
+            animation: sparkleAnim 1s ease-out forwards;
+            z-index: 98;
+        }
+
+        @keyframes sparkleAnim {
+            to {
+                transform: translate(
+                    calc(var(--x) * 20px),
+                    calc(var(--y) * 20px)
+                ) scale(0);
+                opacity: 0;
+            }
+        }
+
+        /* Music Control (Top Corner) */
+        .music-control {
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            width: 50px;
+            height: 50px;
+            background: rgba(255, 255, 255, 0.9);
+            border-radius: 50%;
+            border: none;
+            cursor: pointer;
+            font-size: 1.5rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+            transition: all 0.3s ease;
+            z-index: 1001;
+            /* iOS Safari fix: both prefixed and standard */
+            -webkit-backdrop-filter: blur(10px);
+            backdrop-filter: blur(10px);
+            font-family: 'Segoe UI Emoji', 'Apple Color Emoji', 'Noto Color Emoji', sans-serif;
+        }
+
+        .music-control:hover {
+            transform: scale(1.1);
+            box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
+        }
+
+        .music-control:active {
+            transform: scale(0.95);
+        }
+
+        /* Secret Message Button */
+        .secret-btn {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            width: 60px;
+            height: 60px;
+            background: linear-gradient(135deg, #FF8E53, #FE6B8B);
+            border-radius: 50%;
+            border: none;
+            cursor: pointer;
+            font-size: 1.8rem;
+            color: white;
+            box-shadow: 0 8px 25px rgba(255, 142, 83, 0.5);
+            transition: all 0.3s ease;
+            animation: secretPulse 2s ease-in-out infinite;
+            z-index: 1000;
+        }
+
+        .secret-btn:hover {
+            transform: scale(1.1) rotate(10deg);
+            box-shadow: 0 12px 35px rgba(254, 107, 139, 0.7);
+        }
+
+        @keyframes secretPulse {
+            0%, 100% { box-shadow: 0 8px 25px rgba(255, 142, 83, 0.5); }
+            50% { box-shadow: 0 8px 35px rgba(254, 107, 139, 0.8); }
+        }
+
+        /* Secret Message Modal */
+        .secret-modal {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.8);
+            z-index: 2000;
+            justify-content: center;
+            align-items: center;
+            animation: fadeIn 0.3s ease;
+        }
+
+        .secret-modal.active {
+            display: flex;
+        }
+
+        .secret-content {
+            background: linear-gradient(135deg, #FF8E53 0%, #4ECDC4 50%, #45B7D1 100%);
+            padding: 35px;
+            border-radius: 25px;
+            max-width: 550px;
+            width: 85%;
+            max-height: 85vh;
+            position: relative;
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.5);
+            animation: popIn 0.5s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+            overflow: hidden;
+        }
+
+        .secret-content-inner {
+            background: rgba(255, 255, 255, 0.95);
+            padding: 30px;
+            border-radius: 15px;
+            text-align: center;
+            max-height: calc(85vh - 70px);
+            overflow-y: auto;
+            -webkit-overflow-scrolling: touch;
+        }
+
+        .secret-title {
+            font-size: 2rem;
+            font-weight: 700;
+            color: #FF6B6B;
+            margin-bottom: 20px;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        .secret-text {
+            font-size: 1rem;
+            color: #333;
+            line-height: 1.7;
+            margin-bottom: 20px;
+            text-align: left;
+            padding-right: 10px;
+        }
+
+        .secret-text strong {
+            color: #FF6B6B;
+            font-weight: 700;
+        }
+
+        .close-modal {
+            position: absolute;
+            top: 15px;
+            right: 15px;
+            width: 40px;
+            height: 40px;
+            background: rgba(255, 255, 255, 0.9);
+            border: none;
+            border-radius: 50%;
+            font-size: 1.5rem;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .close-modal:hover {
+            background: white;
+            transform: rotate(90deg);
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+
+        @keyframes popIn {
+            0% {
+                transform: scale(0.3) rotate(-10deg);
+                opacity: 0;
+            }
+            70% {
+                transform: scale(1.05) rotate(2deg);
+            }
+            100% {
+                transform: scale(1) rotate(0);
+                opacity: 1;
+            }
+        }
+
+        /* Instructions */
+        .instructions {
+            font-size: 0.95rem;
+            font-family: 'Cormorant Garamond', serif;
+            font-weight: 400;
+            color: #FFD700;
+            margin-top: 15px;
+            font-style: italic;
+            text-shadow: 0 2px 15px rgba(255, 215, 0, 0.6);
+            opacity: 0;
+            animation: fadeIn 5s ease-out 26s forwards;
+            letter-spacing: 1.5px;
+        }
+
+        /* Developer Credit */
+        .developer-credit {
+            position: fixed;
+            bottom: 10px;
+            left: 10px;
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 0.75rem;
+            color: rgba(255, 215, 0, 0.4);
+            z-index: 999;
+            font-style: italic;
+            letter-spacing: 1px;
+            transition: color 0.3s ease;
+        }
+
+        .developer-credit:hover {
+            color: rgba(255, 215, 0, 0.8);
+        }
+
+        /* Name Prompt Overlay */
+        .name-prompt-overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(135deg, #1a1410 0%, #2d1f1a 50%, #0a0604 100%);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            z-index: 10000;
+            opacity: 1;
+            transition: opacity 0.8s ease, visibility 0.8s ease;
+        }
+
+        .name-prompt-overlay.hidden {
+            opacity: 0;
+            visibility: hidden;
+            pointer-events: none;
+        }
+
+        .name-prompt-card {
+            background: rgba(255, 255, 255, 0.05);
+            /* iOS Safari fix: both prefixed and standard */
+            -webkit-backdrop-filter: blur(20px);
+            backdrop-filter: blur(20px);
+            padding: 50px 40px;
+            border-radius: 30px;
+            border: 2px solid rgba(255, 215, 0, 0.3);
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.5);
+            text-align: center;
+            max-width: 500px;
+            width: 90%;
+            animation: promptSlideIn 0.6s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+        }
+
+        @keyframes promptSlideIn {
+            from {
+                opacity: 0;
+                transform: translateY(-50px) scale(0.9);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0) scale(1);
+            }
+        }
+
+        .prompt-emoji {
+            font-size: 4rem;
+            margin-bottom: 20px;
+            animation: wave 1.5s ease-in-out infinite;
+        }
+
+        @keyframes wave {
+            0%, 100% { transform: rotate(0deg); }
+            25% { transform: rotate(20deg); }
+            75% { transform: rotate(-20deg); }
+        }
+
+        .prompt-title {
+            font-family: 'Cinzel', serif;
+            font-size: 2.5rem;
+            color: #FFD700;
+            margin-bottom: 20px;
+            text-shadow: 0 0 30px rgba(255, 215, 0, 0.8);
+        }
+
+        .prompt-text {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 1.3rem;
+            color: #E8DCC0;
+            margin-bottom: 10px;
+            line-height: 1.6;
+        }
+
+        .prompt-question {
+            font-family: 'Tangerine', cursive;
+            font-size: 2rem;
+            color: #FFA500;
+            margin-bottom: 30px;
+            font-weight: 700;
+        }
+
+        .prompt-input {
+            width: 100%;
+            padding: 15px 25px;
+            font-size: 1.2rem;
+            font-family: 'Cormorant Garamond', serif;
+            border: 2px solid rgba(255, 215, 0, 0.5);
+            border-radius: 50px;
+            background: rgba(255, 255, 255, 0.1);
+            color: #FFD700;
+            text-align: center;
+            outline: none;
+            transition: all 0.3s ease;
+            margin-bottom: 25px;
+            /* Prevent iOS zoom on focus */
+            font-size: 16px;
+        }
+
+        .prompt-input::placeholder {
+            color: rgba(255, 215, 0, 0.5);
+        }
+
+        .prompt-input:focus {
+            border-color: #FFD700;
+            background: rgba(255, 255, 255, 0.15);
+            box-shadow: 0 0 20px rgba(255, 215, 0, 0.3);
+        }
+
+        .prompt-button {
+            padding: 15px 50px;
+            font-size: 1.2rem;
+            font-family: 'Cinzel', serif;
+            font-weight: 700;
+            background: linear-gradient(135deg, #FFD700, #FFA500);
+            color: #1a1410;
+            border: none;
+            border-radius: 50px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            box-shadow: 0 8px 25px rgba(255, 215, 0, 0.4);
+            text-transform: uppercase;
+            letter-spacing: 2px;
+        }
+
+        .prompt-button:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 12px 35px rgba(255, 215, 0, 0.6);
+        }
+
+        .prompt-button:active {
+            transform: translateY(0);
+        }
+
+        .prompt-button:disabled {
+            opacity: 0.5;
+            cursor: not-allowed;
+        }
+
+        /* Mobile Responsive */
+        @media (max-width: 768px) {
+            .name-prompt-card {
+                padding: 40px 30px;
+            }
+            .prompt-emoji {
+                font-size: 3rem;
+            }
+            .prompt-title {
+                font-size: 2rem;
+            }
+            .prompt-text {
+                font-size: 1.1rem;
+            }
+            .prompt-question {
+                font-size: 1.6rem;
+            }
+            .prompt-input {
+                font-size: 16px;
+                padding: 12px 20px;
+            }
+            .prompt-button {
+                font-size: 1rem;
+                padding: 12px 40px;
+            }
+            .greeting {
+                font-size: 2.5rem;
+                letter-spacing: 8px;
+                padding: 0 15px;
+            }
+            .year {
+                font-size: 3rem;
+                margin: 15px 0;
+                letter-spacing: 8px;
+            }
+            .card {
+                padding: 25px 15px;
+                max-width: 95%;
+                margin: 10px;
+            }
+            .welcome-banner {
+                font-size: 1rem;
+                margin: 15px 0;
+            }
+            .personalized-message {
+                font-size: 2.5rem;
+                margin: 25px 0;
+            }
+            .wishes {
+                font-size: 1.1rem;
+                line-height: 2;
+            }
+            .button-group {
+                flex-direction: column;
+                gap: 10px;
+            }
+            .btn {
+                width: 100%;
+                padding: 12px 20px;
+                font-size: 0.9rem;
+            }
+            .instructions {
+                font-size: 0.85rem;
+                margin-top: 12px;
+            }
+            .secret-btn {
+                width: 50px;
+                height: 50px;
+                font-size: 1.5rem;
+                bottom: 20px;
+                right: 20px;
+            }
+            .music-control {
+                width: 45px;
+                height: 45px;
+                font-size: 1.3rem;
+                top: 15px;
+                right: 15px;
+            }
+            .secret-content {
+                padding: 30px 20px;
+                max-width: 90%;
+            }
+            .secret-content-inner {
+                padding: 25px 20px;
+            }
+            .secret-title {
+                font-size: 1.8rem;
+                margin-bottom: 20px;
+            }
+            .secret-text {
+                font-size: 1rem;
+                line-height: 1.6;
+            }
+            .close-modal {
+                width: 35px;
+                height: 35px;
+                font-size: 1.2rem;
+                top: 10px;
+                right: 10px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .greeting {
+                font-size: 1.8rem;
+                letter-spacing: 5px;
+                padding: 0 10px;
+            }
+            .year {
+                font-size: 2.5rem;
+                letter-spacing: 5px;
+                margin: 12px 0;
+            }
+            .card {
+                padding: 20px 12px;
+            }
+            .personalized-message {
+                font-size: 2rem;
+                letter-spacing: 0.5px;
+            }
+            .wishes {
+                font-size: 1rem;
+            }
+            .btn {
+                padding: 10px 18px;
+                font-size: 0.85rem;
+            }
+            .secret-content {
+                padding: 20px 15px;
+            }
+            .secret-content-inner {
+                padding: 20px 15px;
+            }
+            .secret-title {
+                font-size: 1.5rem;
+            }
+            .secret-text {
+                font-size: 0.9rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Background Stars -->
+    <div class="stars" id="stars"></div>
+
+    <!-- Developer Credit -->
+    <div class="developer-credit">Crafted by Sachin</div>
+
+    <!-- Name Prompt Overlay -->
+    <div class="name-prompt-overlay" id="namePromptOverlay">
+        <div class="name-prompt-card">
+            <div class="prompt-emoji">🎉</div>
+            <h2 class="prompt-title">2026 is here! Let's celebrate!</h2>
+            <p class="prompt-text">But first, a quick question:</p>
+            <p class="prompt-question">Who's ready to party? (Your name please! 🥳)</p>
+            <input 
+                type="text" 
+                class="prompt-input" 
+                id="promptNameInput"
+                placeholder="Type your answer here..."
+                maxlength="30"
+                autocomplete="off"
+                autocorrect="off"
+                autocapitalize="words"
+            >
+            <button class="prompt-button" id="promptButton">I know this one! 🎯</button>
+        </div>
+    </div>
+
+    <!-- Canvases -->
+    <canvas id="confetti-canvas"></canvas>
+    <canvas id="fireworks-canvas"></canvas>
+
+    <!-- Card -->
+    <div class="card-container">
+        <div class="card">
+            <div class="greeting">Happy New Year!</div>
+            <div class="year">2026</div>
+            
+            <div class="welcome-banner" id="welcomeBanner"></div>
+
+            <div class="personalize-section">
+                <input 
+                    type="text" 
+                    class="name-input" 
+                    placeholder="Enter your name here..."
+                    id="nameInput"
+                    maxlength="30"
+                    style="display: none;"
+                >
+                <div class="personalized-message" id="personalizedMessage"></div>
+            </div>
+
+            <div class="wishes">
+                May this year bring you joy, success, and endless happiness!<br>
+                Wishing you 365 days of laughter, love, and adventure! ✨
+            </div>
+
+            <div class="button-group">
+                <button class="btn btn-fireworks" onclick="launchFireworks()">
+                    🎆 Launch Fireworks
+                </button>
+                <button class="btn btn-confetti" onclick="startConfetti()">
+                    🎊 Confetti Rain
+                </button>
+            </div>
+
+            <div class="instructions">
+                💫 Tap anywhere for sparkles! 💫
+            </div>
+        </div>
+    </div>
+
+    <!-- Music Control (Top Corner) -->
+    <button class="music-control" onclick="toggleMusic()" id="musicBtn" title="Toggle Music">
+        🔇
+    </button>
+
+    <!-- Secret Message Button -->
+    <button class="secret-btn" onclick="openSecretMessage()" title="Secret Message">
+        🎁
+    </button>
+
+    <!-- Secret Message Modal -->
+    <div class="secret-modal" id="secretModal" onclick="closeSecretMessage(event)">
+        <div class="secret-content">
+            <button class="close-modal" onclick="closeSecretMessage(event)">✕</button>
+            <div class="secret-content-inner">
+                <div class="secret-title" id="secretTitle">🎁 Special Message 🎁</div>
+                <div class="secret-text" id="secretText">
+                    <strong>Dear Friend,</strong><br><br>
+                    
+                    As we step into 2026, I wanted to take a moment to wish you something truly special...<br><br>
+                    
+                    May this new year bring you <strong>endless joy</strong>, <strong>abundant success</strong>, and <strong>unforgettable memories</strong>! 🎉<br><br>
+                    
+                    May every challenge you face turn into an opportunity, and every dream you chase become your reality. ✨<br><br>
+                    
+                    Remember: The best is yet to come! This is YOUR year to shine, to grow, and to become the amazing person you're meant to be. 🌟<br><br>
+                    
+                    Here's to 365 days of laughter, love, adventure, and making every moment count! 🥂<br><br>
+                    
+                    Wishing you health, happiness, and all the success in the world! 💫<br><br>
+                    
+                    <strong>Cheers to an incredible 2026! 🎊🎉</strong>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // iOS/iPhone Compatibility Helpers
+        
+        // Safe sessionStorage wrapper (fails silently in Private Browsing)
+        const safeStorage = {
+            getItem: function(key) {
+                try {
+                    return sessionStorage.getItem(key);
+                } catch(e) {
+                    return null;
+                }
+            },
+            setItem: function(key, value) {
+                try {
+                    sessionStorage.setItem(key, value);
+                } catch(e) {
+                    // Ignore - Private Browsing mode or storage full
+                }
+            }
+        };
+
+        // Generate Background Stars (reduced for performance)
+        const starsContainer = document.getElementById('stars');
+        for (let i = 0; i < 30; i++) { // Reduced from 50 for better performance
+            const star = document.createElement('div');
+            star.className = 'star';
+            star.style.left = Math.random() * 100 + '%';
+            star.style.top = Math.random() * 100 + '%';
+            star.style.width = star.style.height = Math.random() * 3 + 1 + 'px';
+            star.style.animationDelay = Math.random() * 3 + 's';
+            starsContainer.appendChild(star);
+        }
+
+        // Welcome Banner with Current Date
+        function updateWelcomeBanner() {
+            const now = new Date();
+            const options = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' };
+            const formattedDate = now.toLocaleDateString('en-US', options);
+            
+            const welcomeMessages = [
+                '🌟 Welcome to 2026! 🌟',
+                '✨ A Brand New Year Awaits ✨',
+                '🌟 Cheers to New Beginnings! 🌟',
+                '✨ Make 2026 Unforgettable! ✨'
+            ];
+            const randomMessage = welcomeMessages[Math.floor(Math.random() * welcomeMessages.length)];
+            
+            document.getElementById('welcomeBanner').innerHTML = 
+                `${randomMessage}<br><span style="font-size: 0.9em; opacity: 0.9;">${formattedDate}</span>`;
+        }
+        updateWelcomeBanner();
+
+        // Get name from URL query parameter
+        function getQueryParam(param) {
+            const urlParams = new URLSearchParams(window.location.search);
+            return urlParams.get(param);
+        }
+
+        // Personalized Message
+        const nameInput = document.getElementById('nameInput');
+        const personalizedMessage = document.getElementById('personalizedMessage');
+
+        // Name Prompt Overlay Logic
+        const namePromptOverlay = document.getElementById('namePromptOverlay');
+        const promptNameInput = document.getElementById('promptNameInput');
+        const promptButton = document.getElementById('promptButton');
+        const cardContainer = document.querySelector('.card-container');
+
+        // Check for name in URL on page load
+        const nameFromUrl = getQueryParam('name');
+        const storedName = safeStorage.getItem('userName');
+
+        if (nameFromUrl || storedName) {
+            // Name already provided, hide prompt and set name
+            namePromptOverlay.classList.add('hidden');
+            const userName = nameFromUrl ? decodeURIComponent(nameFromUrl) : storedName;
+            personalizedMessage.textContent = `Wishing ${userName} an amazing 2026!`;
+            nameInput.value = userName;
+            if (nameFromUrl) {
+                nameInput.setAttribute('readonly', 'readonly');
+                nameInput.classList.add('readonly');
+            }
+            
+            // Start animations after a short delay
+            setTimeout(() => {
+                startConfetti();
+            }, 500);
+            setTimeout(() => {
+                launchFireworks();
+            }, 1000);
+        } else {
+            // Show prompt, hide main content initially
+            cardContainer.style.opacity = '0';
+            cardContainer.style.pointerEvents = 'none';
+        }
+
+        // Handle name submission
+        function submitName() {
+            const name = promptNameInput.value.trim();
+            if (name) {
+                // Store name in session (using safe wrapper)
+                safeStorage.setItem('userName', name);
+                
+                // Set personalized message
+                personalizedMessage.textContent = `Wishing ${name} an amazing 2026!`;
+                
+                // Hide prompt with fade
+                namePromptOverlay.classList.add('hidden');
+                
+                // Show main content
+                setTimeout(() => {
+                    cardContainer.style.opacity = '1';
+                    cardContainer.style.pointerEvents = 'auto';
+                    cardContainer.style.transition = 'opacity 1s ease';
+                    
+                    // Start animations after content is visible
+                    setTimeout(() => {
+                        startConfetti();
+                    }, 800);
+                    setTimeout(() => {
+                        launchFireworks();
+                    }, 1200);
+                }, 300);
+            }
+        }
+
+        promptButton.addEventListener('click', submitName);
+        
+        promptNameInput.addEventListener('keypress', (e) => {
+            if (e.key === 'Enter') {
+                submitName();
+            }
+        });
+
+        // Enable/disable button based on input
+        promptNameInput.addEventListener('input', (e) => {
+            promptButton.disabled = !e.target.value.trim();
+        });
+
+        nameInput.addEventListener('input', (e) => {
+            const name = e.target.value.trim();
+            if (name) {
+                personalizedMessage.textContent = `✨ Wishing ${name} an amazing 2026! ✨`;
+            } else {
+                personalizedMessage.textContent = '';
+            }
+        });
+
+        // Confetti Animation (reduced particles for performance)
+        const confettiCanvas = document.getElementById('confetti-canvas');
+        const confettiCtx = confettiCanvas.getContext('2d');
+        confettiCanvas.width = window.innerWidth;
+        confettiCanvas.height = window.innerHeight;
+
+        let confettiParticles = [];
+        let confettiActive = false;
+
+        class Confetti {
+            constructor() {
+                this.x = Math.random() * confettiCanvas.width;
+                this.y = -10;
+                this.size = Math.random() * 10 + 5;
+                this.speedY = Math.random() * 3 + 2;
+                this.speedX = Math.random() * 2 - 1;
+                this.color = ['#FFD700', '#FFA500', '#FFED4E', '#F4C430', '#FFB300'][Math.floor(Math.random() * 5)];
+                this.rotation = Math.random() * 360;
+                this.rotationSpeed = Math.random() * 10 - 5;
+            }
+
+            update() {
+                this.y += this.speedY;
+                this.x += this.speedX;
+                this.rotation += this.rotationSpeed;
+
+                if (this.y > confettiCanvas.height) {
+                    this.y = -10;
+                    this.x = Math.random() * confettiCanvas.width;
+                }
+            }
+
+            draw() {
+                confettiCtx.save();
+                confettiCtx.translate(this.x, this.y);
+                confettiCtx.rotate(this.rotation * Math.PI / 180);
+                confettiCtx.fillStyle = this.color;
+                confettiCtx.fillRect(-this.size / 2, -this.size / 2, this.size, this.size);
+                confettiCtx.restore();
+            }
+        }
+
+        function startConfetti() {
+            if (confettiActive) return;
+            confettiActive = true;
+            
+            // Reduced from 100 to 50 for better iPhone performance
+            for (let i = 0; i < 50; i++) {
+                confettiParticles.push(new Confetti());
+            }
+
+            animateConfetti();
+            setTimeout(() => {
+                confettiActive = false;
+                confettiParticles = [];
+            }, 10000);
+        }
+
+        function animateConfetti() {
+            if (!confettiActive) {
+                confettiCtx.clearRect(0, 0, confettiCanvas.width, confettiCanvas.height);
+                return;
+            }
+
+            confettiCtx.clearRect(0, 0, confettiCanvas.width, confettiCanvas.height);
+            confettiParticles.forEach(particle => {
+                particle.update();
+                particle.draw();
+            });
+
+            requestAnimationFrame(animateConfetti);
+        }
+
+        // Fireworks Animation (reduced particles for performance)
+        const fireworksCanvas = document.getElementById('fireworks-canvas');
+        const fireworksCtx = fireworksCanvas.getContext('2d');
+        fireworksCanvas.width = window.innerWidth;
+        fireworksCanvas.height = window.innerHeight;
+
+        let fireworks = [];
+        let particles = [];
+
+        class Firework {
+            constructor(x, y) {
+                this.x = x;
+                this.y = fireworksCanvas.height;
+                this.targetY = y;
+                this.speed = 5;
+                this.exploded = false;
+                this.color = `hsl(${Math.random() * 360}, 100%, 50%)`;
+            }
+
+            update() {
+                if (!this.exploded) {
+                    this.y -= this.speed;
+                    if (this.y <= this.targetY) {
+                        this.exploded = true;
+                        this.explode();
+                    }
+                }
+            }
+
+            explode() {
+                // Reduced from 50 to 30 for better iPhone performance
+                for (let i = 0; i < 30; i++) {
+                    particles.push(new Particle(this.x, this.y, this.color));
+                }
+            }
+
+            draw() {
+                if (!this.exploded) {
+                    fireworksCtx.beginPath();
+                    fireworksCtx.arc(this.x, this.y, 3, 0, Math.PI * 2);
+                    fireworksCtx.fillStyle = this.color;
+                    fireworksCtx.fill();
+                }
+            }
+        }
+
+        class Particle {
+            constructor(x, y, color) {
+                this.x = x;
+                this.y = y;
+                this.size = Math.random() * 3 + 1;
+                this.speedX = Math.random() * 6 - 3;
+                this.speedY = Math.random() * 6 - 3;
+                this.color = color;
+                this.life = 100;
+            }
+
+            update() {
+                this.x += this.speedX;
+                this.y += this.speedY;
+                this.speedY += 0.1; // gravity
+                this.life -= 1.5;
+            }
+
+            draw() {
+                fireworksCtx.beginPath();
+                fireworksCtx.arc(this.x, this.y, this.size, 0, Math.PI * 2);
+                fireworksCtx.fillStyle = this.color;
+                fireworksCtx.globalAlpha = this.life / 100;
+                fireworksCtx.fill();
+                fireworksCtx.globalAlpha = 1;
+            }
+        }
+
+        function launchFireworks() {
+            for (let i = 0; i < 10; i++) {
+                setTimeout(() => {
+                    const x = Math.random() * fireworksCanvas.width;
+                    const y = Math.random() * (fireworksCanvas.height / 2);
+                    fireworks.push(new Firework(x, y));
+                    if (i === 0) {
+                        animateFireworks();
+                    }
+                }, i * 400);
+            }
+        }
+
+        function animateFireworks() {
+            fireworksCtx.fillStyle = 'rgba(0, 0, 0, 0.1)';
+            fireworksCtx.fillRect(0, 0, fireworksCanvas.width, fireworksCanvas.height);
+
+            fireworks.forEach((firework, index) => {
+                firework.update();
+                firework.draw();
+                if (firework.exploded) {
+                    fireworks.splice(index, 1);
+                }
+            });
+
+            particles.forEach((particle, index) => {
+                particle.update();
+                particle.draw();
+                if (particle.life <= 0) {
+                    particles.splice(index, 1);
+                }
+            });
+
+            if (fireworks.length > 0 || particles.length > 0) {
+                requestAnimationFrame(animateFireworks);
+            } else {
+                fireworksCtx.clearRect(0, 0, fireworksCanvas.width, fireworksCanvas.height);
+            }
+        }
+
+        // Touch/Click for Fireworks (with throttling for performance)
+        let lastFireworkTime = 0;
+        document.addEventListener('click', (e) => {
+            const now = Date.now();
+            if (now - lastFireworkTime < 300) return; // Throttle to 300ms
+            lastFireworkTime = now;
+            
+            if (!e.target.closest('.card') && !e.target.closest('.name-prompt-card')) {
+                fireworks.push(new Firework(e.clientX, e.clientY));
+                animateFireworks();
+            }
+        });
+
+        // Sparkle Trail (reduced frequency for mobile)
+        document.addEventListener('mousemove', (e) => {
+            if (Math.random() > 0.85) { // Reduced from 0.7 for better performance
+                const sparkle = document.createElement('div');
+                sparkle.className = 'sparkle';
+                sparkle.style.left = e.clientX + 'px';
+                sparkle.style.top = e.clientY + 'px';
+                sparkle.style.setProperty('--x', Math.random() - 0.5);
+                sparkle.style.setProperty('--y', Math.random() - 0.5);
+                document.body.appendChild(sparkle);
+
+                setTimeout(() => sparkle.remove(), 1000);
+            }
+        });
+
+        // Touch sparkles for mobile
+        document.addEventListener('touchmove', (e) => {
+            if (Math.random() > 0.9) {
+                const touch = e.touches[0];
+                const sparkle = document.createElement('div');
+                sparkle.className = 'sparkle';
+                sparkle.style.left = touch.clientX + 'px';
+                sparkle.style.top = touch.clientY + 'px';
+                sparkle.style.setProperty('--x', Math.random() - 0.5);
+                sparkle.style.setProperty('--y', Math.random() - 0.5);
+                document.body.appendChild(sparkle);
+
+                setTimeout(() => sparkle.remove(), 1000);
+            }
+        }, { passive: true });
+
+        // Secret Message Functions
+        function openSecretMessage() {
+            // Personalize the secret message with the user's name
+            const userName = safeStorage.getItem('userName') || nameInput.value.trim() || 'Friend';
+            const secretTitle = document.getElementById('secretTitle');
+            if (secretTitle) {
+                secretTitle.textContent = `🎁 Special Message for ${userName} 🎁`;
+            }
+            document.getElementById('secretModal').classList.add('active');
+        }
+
+        function closeSecretMessage(event) {
+            if (event.target.id === 'secretModal' || event.target.classList.contains('close-modal')) {
+                document.getElementById('secretModal').classList.remove('active');
+            }
+        }
+
+        // Music Toggle - iPhone compatible (no autoplay, user must tap)
+        // Using a smaller, more compatible audio approach
+        let audio = null;
+        let musicPlaying = false;
+        let audioInitialized = false;
+
+        function initAudio() {
+            if (audioInitialized) return;
+            
+            try {
+                // Create audio element
+                audio = new Audio();
+                audio.src = 'data:audio/mp3;base64,//uQxAAAAAANIAAAAAExBTUUzLjEwMFVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVf/7kMQAD8AAADSAAAAANIAAADSABBFVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVU=';
+                audio.loop = true;
+                audio.volume = 0.5;
+                audioInitialized = true;
+            } catch(e) {
+                console.log('Audio initialization failed:', e);
+            }
+        }
+
+        function toggleMusic() {
+            // Initialize audio on first tap
+            if (!audioInitialized) {
+                initAudio();
+            }
+            
+            if (!audio) {
+                console.log('Audio not available');
+                return;
+            }
+
+            const btn = document.getElementById('musicBtn');
+            
+            if (musicPlaying) {
+                audio.pause();
+                musicPlaying = false;
+                btn.textContent = '🔇';
+            } else {
+                audio.play()
+                    .then(() => {
+                        musicPlaying = true;
+                        btn.textContent = '🎵';
+                    })
+                    .catch((error) => {
+                        console.log('Audio playback failed:', error);
+                        btn.textContent = '🔇';
+                    });
+            }
+        }
+
+        // Resize canvases on window resize
+        window.addEventListener('resize', () => {
+            confettiCanvas.width = window.innerWidth;
+            confettiCanvas.height = window.innerHeight;
+            fireworksCanvas.width = window.innerWidth;
+            fireworksCanvas.height = window.innerHeight;
+        });
+
+        // Prevent double-tap zoom on buttons (iOS)
+        document.querySelectorAll('button').forEach(btn => {
+            btn.addEventListener('touchend', (e) => {
+                e.preventDefault();
+                btn.click();
+            });
+        });
+    </script>
+</body>
+</html>
